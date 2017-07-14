@@ -1,15 +1,15 @@
-DROP TABLE IF EXISTS role;
+DROP TABLE IF EXISTS system_role;
 
-CREATE TABLE role(
+CREATE TABLE system_role(
   name VARCHAR(255) NOT NULL,
 
   CONSTRAINT PK_role PRIMARY KEY (name)
 );
 
-DROP TABLE IF EXISTS user;
+DROP TABLE IF EXISTS system_user;
 
-CREATE TABLE user (
-  id BIGINT NOT NULL AUTO_INCREMENT,
+CREATE TABLE system_user (
+  id BIGSERIAL NOT NULL,
   username VARCHAR(255) NOT NULL,
   password VARCHAR(255) NOT NULL,
 
@@ -17,24 +17,24 @@ CREATE TABLE user (
 );
 
 
-DROP TABLE IF EXISTS user_roles;
+DROP TABLE IF EXISTS system_user_roles;
 
-CREATE TABLE user_roles (
+CREATE TABLE system_user_roles (
   user_id BIGINT NOT NULL,
   roles_name VARCHAR(255) NOT NULL,
 
-  CONSTRAINT FK_many_to_many_user FOREIGN KEY (user_id) REFERENCES user(id),
-  CONSTRAINT FK_many_to_many_role FOREIGN KEY (roles_name) REFERENCES role(name)
+  CONSTRAINT FK_many_to_many_user FOREIGN KEY (user_id) REFERENCES system_user(id),
+  CONSTRAINT FK_many_to_many_role FOREIGN KEY (roles_name) REFERENCES system_role(name)
 );
 
 
 -- Insert Roles
-INSERT role(name) VALUES ('ROLE_ADMIN');
-INSERT role(name) VALUES ('ROLE_BUYER');
+INSERT INTO system_role(name) VALUES ('ROLE_ADMIN');
+INSERT INTO system_role(name) VALUES ('ROLE_BUYER');
 
 -- Insert Admin
-INSERT user(username, password) VALUES ('admin@casadocodigo.com.br', '$2a$10$3Qrx0rv8qSmZ8s3RlD5qE.upleP7.Qzbg5EoIAm62evEkY4c023TK');
+INSERT INTO system_user(username, password) VALUES ('admin@casadocodigo.com.br', '$2a$10$3Qrx0rv8qSmZ8s3RlD5qE.upleP7.Qzbg5EoIAm62evEkY4c023TK');
 
 -- join Admin to Role_Admin
 
-INSERT user_roles(user_id, roles_name) VALUES (1,'ROLE_ADMIN');
+INSERT INTO system_user_roles(user_id, roles_name) VALUES (1,'ROLE_ADMIN');

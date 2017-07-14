@@ -4,11 +4,13 @@ import org.springframework.security.core.GrantedAuthority;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 /**
  * Created by nando on 13/07/17.
  */
 @Entity
+@Table(name = "system_role")
 public class Role implements GrantedAuthority{
 
     @Id

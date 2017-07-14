@@ -1,9 +1,9 @@
 DROP TABLE IF EXISTS product;
 
 CREATE TABLE product (
-  id BIGINT NOT NULL AUTO_INCREMENT,
+  id BIGSERIAL NOT NULL,
   title VARCHAR(255) NOT NULL,
-  description LONGTEXT,
+  description TEXT,
   number_of_pages INTEGER NOT NULL CHECK (number_of_pages >= 30),
   release_date DATE NOT NULL,
   summary_path VARCHAR(255),
@@ -25,7 +25,7 @@ CREATE TABLE product_prices (
 DROP TABLE IF EXISTS author;
 
 CREATE TABLE author (
-  id BIGINT NOT NULL AUTO_INCREMENT,
+  id BIGSERIAL NOT NULL,
   name VARCHAR(255) NOT NULL,
 
   CONSTRAINT PK_author PRIMARY KEY (id)

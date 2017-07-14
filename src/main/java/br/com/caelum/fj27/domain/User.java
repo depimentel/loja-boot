@@ -14,6 +14,7 @@ import java.util.stream.Stream;
  * Created by nando on 13/07/17.
  */
 @Entity
+@Table(name = "system_user")
 public class User implements UserDetails{
 
     @Id
