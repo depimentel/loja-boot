@@ -28,7 +28,7 @@ import java.util.Optional;
 @RequestMapping("/products")
 public class ProductController {
 
-    private static Integer PAGE_SIZE = 10;
+    private static Integer PAGE_SIZE = 5;
 
     @Autowired
     private ProductRepository productRepository;

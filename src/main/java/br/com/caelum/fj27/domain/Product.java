@@ -26,6 +26,7 @@ public class Product {
     private String title;
 
     @NotBlank
+    @Lob
     private String description;
 
     @NotNull

@@ -48,9 +48,9 @@
 
 </table>
 <ul>
-    <c:forEach begin="0" end="${pageable.totalPages}" varStatus="status">
+    <c:forEach begin="1" end="${pageable.totalPages}" varStatus="status">
     <li>
-        <a href="?page=${status.index}">${status.index + 1}</a>
+        <a href="?page=${status.index-1}">${status.index}</a>
     </li>
     </c:forEach>
 </ul>

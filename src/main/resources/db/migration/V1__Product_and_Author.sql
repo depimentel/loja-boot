@@ -101,3 +101,58 @@ INSERT INTO product_prices(product_id, book_type, value) VALUES (5,'PRINTED', 35
 INSERT INTO product_prices(product_id, book_type, value) VALUES (5,'COMBO', 58.0);
 
 INSERT INTO product_authors(product_id, authors_id) VALUES (5,1);
+
+-- Insert Book Spring ID:6
+INSERT INTO product(title, description, number_of_pages, release_date, summary_path)
+VALUES ('Spring Reactive', 'Spring Reactive in action', 600, '2018-11-05', 'Spring-Reactive-In-Action.pdf');
+
+INSERT INTO product_prices(product_id, book_type, value) VALUES (6,'EBOOK', 25.0);
+INSERT INTO product_prices(product_id, book_type, value) VALUES (6,'PRINTED', 35.0);
+INSERT INTO product_prices(product_id, book_type, value) VALUES (6,'COMBO', 58.0);
+
+INSERT INTO product_authors(product_id, authors_id) VALUES (6,1);
+INSERT INTO product_authors(product_id, authors_id) VALUES (6,2);
+
+
+-- Insert Book Spring ID:7
+INSERT INTO product(title, description, number_of_pages, release_date, summary_path)
+VALUES ('Spring Actuator', 'Spring Actuator in action', 100, '2018-2-05', 'Spring-Actuator-In-Action.pdf');
+
+INSERT INTO product_prices(product_id, book_type, value) VALUES (7,'EBOOK', 25.0);
+INSERT INTO product_prices(product_id, book_type, value) VALUES (7,'PRINTED', 35.0);
+INSERT INTO product_prices(product_id, book_type, value) VALUES (7,'COMBO', 58.0);
+
+INSERT INTO product_authors(product_id, authors_id) VALUES (7,1);
+
+
+-- Insert Book Spring ID:8
+INSERT INTO product(title, description, number_of_pages, release_date, summary_path)
+VALUES ('Spring Security', 'Spring Security in action', 100, '2018-2-05', 'Spring-Security-In-Action.pdf');
+
+INSERT INTO product_prices(product_id, book_type, value) VALUES (8,'EBOOK', 25.0);
+INSERT INTO product_prices(product_id, book_type, value) VALUES (8,'PRINTED', 35.0);
+INSERT INTO product_prices(product_id, book_type, value) VALUES (8,'COMBO', 58.0);
+
+INSERT INTO product_authors(product_id, authors_id) VALUES (8,1);
+
+
+-- Insert Book Spring ID:9
+INSERT INTO product(title, description, number_of_pages, release_date, summary_path)
+VALUES ('Spring MVC', 'Spring MVC in action', 100, '2018-2-05', 'Spring-MVC-In-Action.pdf');
+
+INSERT INTO product_prices(product_id, book_type, value) VALUES (9,'EBOOK', 25.0);
+INSERT INTO product_prices(product_id, book_type, value) VALUES (9,'PRINTED', 35.0);
+INSERT INTO product_prices(product_id, book_type, value) VALUES (9,'COMBO', 58.0);
+
+INSERT INTO product_authors(product_id, authors_id) VALUES (9,2);
+
+
+-- Insert Book Spring ID:10
+INSERT INTO product(title, description, number_of_pages, release_date, summary_path)
+VALUES ('Spring Security oAuth', 'Spring Security oAuth in action', 100, '2018-2-05', 'Spring-Security-oAuth-In-Action.pdf');
+
+INSERT INTO product_prices(product_id, book_type, value) VALUES (10,'EBOOK', 25.0);
+INSERT INTO product_prices(product_id, book_type, value) VALUES (10,'PRINTED', 35.0);
+INSERT INTO product_prices(product_id, book_type, value) VALUES (10,'COMBO', 58.0);
+
+INSERT INTO product_authors(product_id, authors_id) VALUES (10,2);
