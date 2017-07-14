@@ -1,5 +1,6 @@
 package br.com.caelum.fj27.domain;
 
+import org.hibernate.annotations.Type;
 import org.hibernate.validator.constraints.NotBlank;
 import org.springframework.format.annotation.DateTimeFormat;
 
@@ -27,6 +28,7 @@ public class Product {
 
     @NotBlank
     @Lob
+    @Type(type="org.hibernate.type.TextType")
     private String description;
 
     @NotNull
